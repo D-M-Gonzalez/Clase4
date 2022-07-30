@@ -263,3 +263,83 @@ function ordenSuperior(){
 
     console.log(arrayDeBusqueda)
 }
+
+function ordenSuperior2(){
+    const arrayEjemplo = [
+        {
+            tipo: "mamíferos",
+            integrantes: [
+                {
+                    nombre: "gato",
+                    patas: 4
+                },
+                {
+                    nombre: "mono",
+                    patas: 2
+                },
+                {
+                    nombre: "leon",
+                    patas: 4
+                },
+                {
+                    nombre: "ballena",
+                    patas: 0
+                },
+            ]
+        },
+        {
+            tipo: "insectos",
+            integrantes: [
+                {
+                    nombre: "hormiga",
+                    patas: 6
+                },
+                {
+                    nombre: "cucaracha",
+                    patas: 6
+                },
+                {
+                    nombre: "mantis",
+                    patas: 4
+                },
+                {
+                    nombre: "araña",
+                    patas: 8
+                },
+            ]
+        },
+        {
+            tipo: "reptiles",
+            integrantes: [
+                {
+                    nombre: "serpiente",
+                    patas: 0
+                },
+                {
+                    nombre: "lagarto",
+                    patas: 4
+                },
+                {
+                    nombre: "cocodrilo",
+                    patas: 4
+                },
+            ]
+        },
+    ]   
+    
+    alert("Vamos a crear un nuevo array integrado por elementos buscados por su cantidad de patas")
+    const filtro = prompt("Ingrese la cantidad de patas:")
+
+    const nuevoArray = []
+
+    arrayEjemplo.forEach((elemento,indice,array)=>{
+        const encontrado = elemento.integrantes.filter((subElemento, subIndice, subArray)=>{
+            return subElemento.patas == filtro
+        })
+        encontrado.forEach((elementoEnc, indiceEnc, arrayEnc)=>{
+            nuevoArray.push(elementoEnc)
+        })
+    })
+
+    console.log(nuevoArray)
+}
