@@ -56,7 +56,7 @@ function filterMethod(){
     const filtro = prompt("Ingrese el número de patas:")
 
     const nuevoArray = arrayEjemplo.filter((elemento,indice,array)=>{
-        return elemento.patas === filtro
+        return elemento.patas == filtro
     })    
 
     console.log(nuevoArray)
@@ -85,7 +85,7 @@ function findMethod(){
     const filtro = prompt("Ingrese el número de patas:")
 
     const elementoBuscado = arrayEjemplo.find((elemento,indice,array)=>{
-        return elemento.patas === filtro
+        return elemento.patas == filtro
     })    
 
     console.log(elementoBuscado)
@@ -114,7 +114,7 @@ function someMethod(){
     const filtro = prompt("Ingrese el número de patas:")
 
     const elementoEncontrado = arrayEjemplo.some((elemento,indice,array)=>{
-        return elemento.patas === filtro
+        return elemento.patas == filtro
     })    
 
     console.log(elementoEncontrado)
